@@ -100,7 +100,7 @@ export const LeetCodeSection = () => {
 
     // Parse and filter the submission calendar
     const parsedData = Object.entries(JSON.parse(submissionCalendar))
-      .filter(([timestamp, count]) => count > 0) // Exclude days with 0 submissions
+      .filter(([timestamp, count]) => (count as number) > 0) // Exclude days with 0 submissions
       .map(([timestamp, count]) => {
         try {
           const date = new Date(parseInt(timestamp, 10) * 1000)
@@ -334,11 +334,11 @@ export const LeetCodeSection = () => {
                   startDate={startDate} // Start of the last 12 months
                   endDate={endDate} // Today's date
                   values={submissionHeatmapData}
-                  classForValue={(value) => {
+                  classForValue={(value: { count: number } | null) => {
                     if (!value) return "color-empty";
                     return `color-scale-${Math.min(value.count, 4)}`;
                   }}
-                  tooltipDataAttrs={(value) => {
+                  tooltipDataAttrs={(value: { date: string; count: number } | null) => {
                     return value && value.count > 0
                       ? {
                           "data-tooltip-id": "heatmap-tooltip",
@@ -352,11 +352,12 @@ export const LeetCodeSection = () => {
                 {/* ReactTooltip Provider */}
                 <ReactTooltip
                   id="heatmap-tooltip"
-                  effect="solid"
-                  backgroundColor="#333"
-                  textColor="#fff"
-                  borderColor="#555"
-                  border
+                  variant="dark"
+                  style={{
+                    backgroundColor: "#333",
+                    color: "#fff",
+                    border: "1px solid #555"
+                  }}
                 />
               </div>
               {/* Padding Below Heatmap */}
