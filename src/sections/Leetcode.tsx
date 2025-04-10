@@ -15,6 +15,7 @@ import {
   ResponsiveContainer,
   Line,
 } from "recharts";
+// @ts-ignore
 import CalendarHeatmap from "react-calendar-heatmap";
 import "react-calendar-heatmap/dist/styles.css";
 import { Tooltip as ReactTooltip } from "react-tooltip";
