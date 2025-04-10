@@ -73,8 +73,7 @@ export const HeroSection = () => {
         <div className="max-w-lg mx-auto">
         <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">Weaving Magic into User Interactions</h1>
         <p className="mt-4 text-center text-white/60 md:text-lg">
-          I am a Fullstack Developer with a passion for creating beautiful and
-          functional user interfaces.
+          I&apos;m a Full Stack Developer
         </p>
         </div>
 

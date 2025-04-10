@@ -12,7 +12,7 @@ export const ContactSection = () => {
       }}></div>
     <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
     <div >
-      <h2 className="font-serif text-2xl md:text-3xl">Let's collaborate and bring our visions to life.</h2>
+      <h2 className="font-serif text-2xl md:text-3xl">Let&apos;s create something amazing together</h2>
       <p className="text-sm md:text-base mt-2">Your next project deserves the best. Let's connect and discuss how I can help you bring it to life with excellence.</p>
     </div>
     <div>
